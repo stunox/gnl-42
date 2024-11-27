@@ -93,3 +93,10 @@ unsigned int	ft_strlen(char *s)
 		i++;
 	return (i);
 }
+
+int	readif(int cond, int fd, char *buf)
+{
+	if (cond)
+		return (read(fd, buf, BUFFER_SIZE));
+	return (0);
+}

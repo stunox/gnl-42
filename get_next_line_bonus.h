@@ -6,7 +6,7 @@
 /*   By: nbasheer <nbasheer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 11:24:59 by nbasheer          #+#    #+#             */
-/*   Updated: 2024/11/27 11:19:04 by nbasheer         ###   ########.fr       */
+/*   Updated: 2024/11/27 13:05:01 by nbasheer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ char			*ft_strdup(char *s);
 unsigned int	ft_strlen(char *s);
 char			*ft_substr(char *s, unsigned int start, unsigned int len);
 char			*get_next_line(int fd);
+int				readif(int cond, int fd, char *buf);
 
 #endif // GET_NEXT_LINE_BONUS_H 

@@ -6,7 +6,7 @@
 /*   By: nbasheer <nbasheer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 11:24:50 by nbasheer          #+#    #+#             */
-/*   Updated: 2024/11/27 11:08:55 by nbasheer         ###   ########.fr       */
+/*   Updated: 2024/11/27 13:04:01 by nbasheer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ char	*get_next_line(int fd)
 	buf = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	while (buf)
 	{
-		n = read(fd, buf, BUFFER_SIZE * (temp == NULL));
+		n = readif(temp == NULL, fd, buf);
 		if (n <= 0 || buf[0] == '\0')
 		{
 			if (n == 0 && line)
